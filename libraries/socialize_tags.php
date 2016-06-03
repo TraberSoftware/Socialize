@@ -195,7 +195,7 @@ class Socialize_Tags extends TagManager {
 	 * 		</ion:socialize>
 	 */
 	public static function whatsapp_share_simple($tag) {
-		$url = self::get_url($tag);
+		$url        = self::get_url($tag);
 		$render     = self::get_param($tag, 'render', TRUE);
 		$label      = self::get_param($tag, 'label', 'Share on Whatsapp');
 		$link_class = self::get_param($tag, 'class', 'whatsapp-share-btn');
@@ -486,6 +486,18 @@ class Socialize_Tags extends TagManager {
 		switch ($url) {
 			case 'base_url':
 				return base_url();
+			case 'element_url':
+				$article = $tag->getParent('article');
+				if(!empty($article)){ // Current page is an article
+					$article_data =& $article->getData();
+					return $article_data['absolute_url'];
+				}
+
+				$page = $tag->getParent('page');
+				if(!empty($page)){ // Current page is a page
+					$page_data =& $page->getData();
+					return $page_data['absolute_url'];
+				}
 			case 'current_url':
 			default:
 				return current_url();
