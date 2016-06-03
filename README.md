@@ -27,7 +27,7 @@ Syntax:
   * whatsapp_share_simple
 
 Common parameters:
-  * url: The URL to share. Can be "base_url" for website base URL, "current_url" (i hope i don't need to explain what it does), or a custom URL. Default value is "current_url".
+  * url: The URL to share. Can be "base_url" for website base URL, "current_url" (i hope i don't need to explain what it does), "element_url" for <ion:page> url or <ion:article> url, or a custom URL. Default value is "current_url".
   * label: The URL label.  Default: Share on *.
   * class: The link class. Default: *-share-btn (whatsapp-share-btn).
   * render: Whether or not render the full link, or just return the link parameters (href, class, data-* params, etc). Default: TRUE.
