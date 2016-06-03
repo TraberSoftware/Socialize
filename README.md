@@ -1,7 +1,9 @@
 # Socialize
-Social buttons for IonizeCMS
+Social buttons for IonizeCMS.
 
 Add social buttons (share, like) to your IonizeCMS website using this module. You can use "normal" or "simple" functions to add the buttons.
+
+**Credits:** To "trk", the original creator of the very first sharing buttons for IonizeCMS (https://github.com/trk/Sociallike). This is a modificacion of that original module, but with some improvements and the "simple" sharing functions.
 
 ## Usage
 It shall be used inside a ```<ion:page>``` or ```<ion:page:article>``` tag:
